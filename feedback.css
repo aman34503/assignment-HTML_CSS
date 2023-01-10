@@ -1,0 +1,105 @@
+.rate{
+     
+      position: relative;
+      top:0;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      left: 0;
+      right: 0;
+      
+      margin: auto;
+}
+  .rate:not(:checked) > input {
+      position:absolute;
+      top:-9999px;
+  }
+  .rate:not(:checked) > label {
+      float:right;
+      width:1em;
+      overflow:hidden;
+      white-space:nowrap;
+      cursor:pointer;
+      font-size:30px;
+      color:#ccc;
+  }
+  .rate:not(:checked) > label:before {
+      content: '★ ';
+  }
+  .rate > input:checked ~ label {
+      color: #ffc700;    
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+      color: #deb217;  
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+      color: #c59b08;
+  }
+
+  *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color:  rgb(50, 11, 122);
+      color: white;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:rgb(30,30,40); }
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #6f6de2;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #496ccc; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:yellow;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:rgb(143, 17, 216);
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#CC4949; }
+
+
+
+@media only screen and (max-width: 700px){
+     
+}
